@@ -1,6 +1,13 @@
 #!/bin/bash
-sudo apt-get install composer
+sudo apt-get install git curl
+sudo add-apt-repository ppa:ondrej/php
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install php7.1 
 sudo apt-get install -y php-mcrypt php-gd php-mbstring php-zip php-xml
+curl -sS https://getcomposer.org/installer | php
+mv composer.phar /usr/local/bin/composer
+chmod +x /usr/local/bin/composer
 echo "========================================="
 echo "========================================="
 echo "Installing laravel. Wait a minute or two"
